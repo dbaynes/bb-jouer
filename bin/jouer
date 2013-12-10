@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require './lib/bb_jouer.rb'
+
+@p = BbJouer.new
+puts "Play Ball!!!!"
+puts "First Player is Robinson Cano of the Seattle Mariners - Hit Go to configure batting situation."
+@p.build_stat_table
+until @p.over?
+  puts "Playing at Home? (y or n)"
+  home = gets.chomp.capitalize
+  puts "Lefty on the Mound? (y or n)"
+  pitcher = gets.chomp.capitalize
+  puts "Runner on First? (y or n)"
+  first = gets.chomp.capitalize
+  puts "Runner on Second? (y or n)"
+  second = gets.chomp.capitalize
+  puts "Runner on Third? (y or n)"
+  third = gets.chomp.capitalize
+  puts @p.calculate_chances(home,pitcher,first,second,third)
+end  
