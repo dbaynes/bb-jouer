@@ -7,15 +7,12 @@ class BbJouer
   end
   #stat table
   def build_stat_table 
-    #test_stat_table = Array.new(1000)    
-    #test_stat_table.length
     @stat_table = Array.new(@player[:H]){|v| v="Base Hit"}
     @stat_table = @stat_table + Array.new(@player[:D]){"Double"}
     @stat_table = @stat_table + Array.new(@player[:T]){"Trible"}
     @stat_table = @stat_table + Array.new(@player[:HR]){"Home Run"}
     @stat_table = @stat_table + Array.new(@player[:BB]){"Ball Four!"}
     @stat_table = @stat_table + Array.new(@player[:SO]){"Strike Three!"}
-    #@stat_table = stat_table + Array.new(@player[:BA]-stat_table.length){"Sacrafice"}
     @stat_table = @stat_table + Array.new(@player[:HBP]){"Hit By Pitch"}
     @stat_table = @stat_table + Array.new(@player[:SAC]){"Sacrafice"}
     @stat_table = @stat_table + Array.new(1000-@stat_table.length){"Outta There!"}
