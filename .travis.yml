@@ -4,4 +4,4 @@ rvm:
   - "1.9.3"
   - "2.0.0"
  #execute: bin/jouer
- #script: bundle exec rspec spec/bb_jouer_spec.rb
+ #script: rspec spec/bb_jouer_spec.rb
