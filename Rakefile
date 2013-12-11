@@ -1,3 +1,2 @@
-task :default do
-  
+task :default do  
 end
